@@ -1,3 +1,18 @@
+https://viacep.com.br/
+
+CONSULTA POR CEP:
+
+JSON:
+https://viacep.com.br/ws/76808270/json/
+
+XML:
+https://viacep.com.br/ws/76808270/xml/
+
+
+CONSULTA POR ENDERECO:
+https://viacep.com.br/ws/RO/Porto Velho/Geraldo Siqueira/json
+https://viacep.com.br/ws/RO/Porto Velho/Farquar/xml
+
 
 #### Formulário:
 
