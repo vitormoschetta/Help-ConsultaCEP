@@ -90,4 +90,31 @@ function pesquisacep(valor)
         limpa_formulário_cep();
     }
 };
+
+
+
+function limpa_formulário_cep() {
+    //Limpa valores do formulário de cep.
+    document.getElementById('Rua').value=("");
+    document.getElementById('Bairro').value=("");
+    document.getElementById('Cidade').value=("");
+    document.getElementById('Uf').value=("");
+}
+
+
+function meu_callback(conteudo) {
+    if (!("erro" in conteudo)) {
+        //Atualiza os campos com os valores.
+        document.getElementById('Rua').value=(conteudo.logradouro);
+        document.getElementById('Bairro').value=(conteudo.bairro);
+        document.getElementById('Cidade').value=(conteudo.localidade);
+        document.getElementById('Uf').value=(conteudo.uf);
+    } //end if.
+    else {
+        //CEP não Encontrado.
+        limpa_formulário_cep();
+        alert("CEP não encontrado.");
+    }
+}
+
 ```
