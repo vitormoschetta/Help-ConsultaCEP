@@ -1,6 +1,53 @@
 
+#### Formulário:
+
+```
+<div class="row">
+    <div class="row col-12"
+        <section class="col col-md-6">
+            Cep
+            <input type="text" asp-for="Cep" maxlength="9" class="form-control required" onblur="pesquisacep(this.value)" />
+        </section>
+    </div>
+
+    <div class="row col-12">
+        <section class="col col-md-8">
+            Rua
+            <input type="text" asp-for="Rua" maxlength="150" class="form-control required" />
+        </section>
+        <section class="col col-md-4">
+            Número
+            <input type="text" asp-for="Numero" class="form-control" />
+        </section>
+    </div>
+
+    <div class="row col-12">
+        <section class="col col-md-6">
+            Complemento
+            <input type="text" asp-for="Complemento" maxlength="75" class="form-control" />
+        </section>
+        <section class="col col-md-6">
+            Bairro
+            <input type="text" asp-for="Bairro" maxlength="100" class="form-control required" />
+        </section>
+    </div>
+
+    <div class="row col-12">
+        <section class="col col-md-9">
+            Cidade
+            <input type="text" asp-for="Cidade" maxlength="100" class="form-control required" />
+        </section>
+        <section class="col col-3">
+            UF
+            <select asp-for="Uf" maxlength="2" class="custom-select custom-select-sm  required" asp-items="ViewBag.UfId"></select>
+        </section>
+    </div>
+</div>
+
+```
 
 
+#### Função JavaScript
 
 ```
 function pesquisacep(valor) 
